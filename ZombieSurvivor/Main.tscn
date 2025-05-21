@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dqyv0ndrkc11j"] ; Increment load_steps
+
+[ext_resource type="PackedScene" uid="uid://d0vj515hcdkrs" path="res://Level.tscn" id="1_level"]
+[ext_resource type="PackedScene" uid="uid://bu007krix07qj" path="res://player.tscn" id="2_player"]
+[ext_resource type="PackedScene" uid="uid://cy87lw0afg3n3" path="res://UI.tscn" id="3_ui"]
+[ext_resource type="PackedScene" uid="uid://cwmig8l73w7fu" path="res://zombie.tscn" id="4_zombie"]
+[ext_resource type="Script" path="res://main.gd" id="5_script_main"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("5_script_main")
+
+[node name="Level" parent="." instance=ExtResource("1_level")]
+
+[node name="Player" parent="." instance=ExtResource("2_player")]
+position = Vector2(100, 550) # Ground top is at y=575, player sprite is 32px, so 575-16 = 559. 550 is fine.
+
+[node name="UI" parent="." instance=ExtResource("3_ui")]
+
+[node name="Zombie" parent="." instance=ExtResource("4_zombie")]
+position = Vector2(500, 550)
+
+[node name="Zombie2" parent="." instance=ExtResource("4_zombie")]
+position = Vector2(800, 550)
+
+[node name="Zombie3" parent="." instance=ExtResource("4_zombie")]
+position = Vector2(1200, 550)

@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy87lw0afg3n3"]
+
+[ext_resource type="Script" path="res://ui.gd" id="1_uqwqf"] ; Will be created next
+
+[sub_resource type="LabelSettings" id="LabelSettings_xlm56"]
+font_size = 48
+font_color = Color(1, 0.2, 0.2, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_uqwqf")
+
+[node name="HealthLabel" type="Label" parent="."]
+anchors_preset = 5 # Top-left
+anchor_right = 0.217
+anchor_bottom = 0.075
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -140.006 # Adjusted for typical text size
+offset_bottom = -22.8 # Adjusted for typical text size
+text = "Health: 100"
+vertical_alignment = 1
+
+[node name="MessageLabel" type="Label" parent="."]
+visible = false
+anchors_preset = 8 # Center
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -50.0
+offset_right = 200.0
+offset_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GAME OVER!" # Placeholder text
+label_settings = SubResource("LabelSettings_xlm56")
+horizontal_alignment = 1
+vertical_alignment = 1
