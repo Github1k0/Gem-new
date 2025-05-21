@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 75.0
-export var health = 30
+@export var health = 30
 var player = null
 
 func _ready():

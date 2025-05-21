@@ -1,7 +1,7 @@
 extends CanvasLayer
 
-onready var health_label = $HealthLabel
-onready var message_label = $MessageLabel
+@onready var health_label = $HealthLabel
+@onready var message_label = $MessageLabel
 
 func _ready():
 	# Connect to Player signals

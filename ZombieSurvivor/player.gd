@@ -6,7 +6,7 @@ signal died
 const SPEED = 300.0
 const BULLET_SCENE = preload("res://bullet.tscn")
 
-export var health = 100
+@export var health = 100
 var facing_direction = Vector2.RIGHT
 
 func _ready():
