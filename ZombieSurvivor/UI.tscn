@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cy87lw0afg3n3"]
+[gd_scene load_steps=4 format=3 uid="uid://cy87lw0afg3n3"]
 
-[ext_resource type="Script" path="res://ui.gd" id="1_uqwqf"] ; Will be created next
+[ext_resource type="Script" path="res://ui.gd" id="1_uqwqf"]
+[ext_resource type="Texture2D" uid="uid://c2b6h6ccnlk8n" path="res://icon.svg" id="2_icon"] ; Added icon.svg
 
 [sub_resource type="LabelSettings" id="LabelSettings_xlm56"]
 font_size = 48
@@ -39,3 +40,24 @@ text = "GAME OVER!" # Placeholder text
 label_settings = SubResource("LabelSettings_xlm56")
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="MoveLeftButton" type="TouchScreenButton" parent="."]
+position = Vector2(50, 554)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_icon")
+action = "touch_move_left"
+visibility_mode = 1 # Always visible, even if parent is hidden (default for Control nodes)
+
+[node name="MoveRightButton" type="TouchScreenButton" parent="."]
+position = Vector2(150, 554)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_icon")
+action = "touch_move_right"
+visibility_mode = 1
+
+[node name="ShootButton" type="TouchScreenButton" parent="."]
+position = Vector2(1038, 554)
+scale = Vector2(0.5, 0.5)
+texture_normal = ExtResource("2_icon")
+action = "touch_shoot"
+visibility_mode = 1
